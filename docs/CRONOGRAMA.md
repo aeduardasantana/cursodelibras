@@ -33,7 +33,18 @@ Este arquivo evita perda de sequência durante o desenvolvimento.
 - [ ] Incorporar imagens originais: Sacramentos
 - [ ] Incorporar imagens originais: Funções
 - [ ] Incorporar imagens originais: Pecados
-- [ ] Repetir mapeamento visual nas Unidades II–IV
+- [x] Registrar pontos de entrada visuais das Unidades II–IV
+- [ ] Unidade II: mapear faixas exatas e incorporar pranchas — próxima frente
+- [ ] Unidade III: mapear conteúdo visual/misto e incorporar originais
+- [ ] Unidade IV: mapear conteúdo visual/misto e incorporar originais
+
+## Ordem operacional dos módulos
+1. Unidade I — concluir incorporação visual e catalogação do vocabulário.
+2. Unidade II — pronomes/advérbios (p. 55), meses (p. 65), semana (p. 66), estações (p. 67), vocabulário religioso (p. 69).
+3. Unidade III — verbos (p. 70), concordância (p. 71), classificadores (p. 72).
+4. Unidade IV — iconicidade, narrativas e tradução/interpretação (p. 73); projetos práticos (p. 74).
+5. Revisão de integralidade das quatro unidades.
+6. Somente então avançar aos anexos independentes.
 
 ## Etapa 4 — Anexos independentes
 - [ ] Hospedar os originais
