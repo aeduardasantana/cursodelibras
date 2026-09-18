@@ -13,11 +13,11 @@ main:{title:"Apostila — Curso de Libras para Contexto Católico",pages:266,sec
 {key:"pecados",title:"Pecados",printedPage:45,sourcePage:47,type:"visual"}
 ]},
 unit2:{title:"Unidade II — Estrutura Linguística Básica e Vocabulário Religioso",sections:[
-{key:"pronomes",title:"Pronomes e advérbios",printedPage:55,type:"visual",status:"mapear-faixa"},
+{key:"pronomes",title:"Pronomes e advérbios",printedPage:55,type:"mixed",status:"auditar-faixa"},
 {key:"meses",title:"Meses",printedPage:65,type:"visual",status:"mapear-faixa"},
 {key:"semana",title:"Semana",printedPage:66,type:"visual",status:"mapear-faixa"},
 {key:"estacoes",title:"Estações",printedPage:67,type:"visual",status:"mapear-faixa"},
-{key:"religioso",title:"Vocabulário religioso — Antigo Testamento, Novo Testamento e Lugares Bíblicos",printedPage:69,type:"visual",status:"mapear-faixa"}
+{key:"religioso",title:"Vocabulário religioso — Antigo Testamento, Novo Testamento e Lugares Bíblicos",printedPage:69,type:"visual",status:"auditar-faixa"}
 ]},
 unit3:{title:"Unidade III — Gramática Visual e Ampliação de Vocabulário",sections:[
 {key:"verbos",title:"Verbos principais e flexões",printedPage:70,type:"mixed",status:"mapear"},
