@@ -21,6 +21,7 @@ Este arquivo evita perda de sequência durante o desenvolvimento.
 ## Etapa 3 — Camada visual da apostila  ← ETAPA ATUAL
 - [x] Manifesto de páginas visuais da Unidade I
 - [x] Componente de localização das pranchas
+- [x] Visualizador em carrossel: uma página por vez, setas, swipe e teclado
 - [ ] Incorporar imagens originais: Corpo Humano
 - [ ] Incorporar imagens originais: Alfabeto
 - [ ] Incorporar imagens originais: Números/Matemática
