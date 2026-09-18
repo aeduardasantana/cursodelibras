@@ -35,8 +35,10 @@ Este arquivo evita perda de sequência durante o desenvolvimento.
 - [ ] Incorporar imagens originais: Pecados
 - [x] Registrar pontos de entrada visuais das Unidades II–IV
 - [ ] Unidade II: mapear faixas exatas e incorporar pranchas — próxima frente
-- [ ] Unidade III: mapear conteúdo visual/misto e incorporar originais
-- [ ] Unidade IV: mapear conteúdo visual/misto e incorporar originais
+- [x] Unidade III: estruturar Material de apoio por aula
+- [ ] Unidade III: incorporar recursos visuais quando aplicável
+- [x] Unidade IV: estruturar Material de apoio por aula
+- [ ] Unidade IV: incorporar recursos visuais quando aplicável
 
 ## Ordem operacional dos módulos
 1. Unidade I — concluir incorporação visual e catalogação do vocabulário.
