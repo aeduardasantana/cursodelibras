@@ -22,7 +22,9 @@ Este arquivo evita perda de sequência durante o desenvolvimento.
 - [x] Manifesto de páginas visuais da Unidade I
 - [x] Componente de localização das pranchas
 - [x] Visualizador em carrossel: uma página por vez, setas, swipe e teclado
-- [ ] Incorporar imagens originais: Corpo Humano
+- [ ] Incorporar imagens originais: Corpo Humano — em execução
+- [x] Remover grade redundante de temas da Aula 04
+- [ ] Catalogar palavras reais de Corpo Humano página a página — em execução
 - [ ] Incorporar imagens originais: Alfabeto
 - [ ] Incorporar imagens originais: Números/Matemática
 - [ ] Incorporar imagens originais: Cumprimentos
