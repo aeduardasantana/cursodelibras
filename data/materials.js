@@ -1,7 +1,7 @@
 window.COURSE_MATERIALS={
 main:{title:"Apostila — Curso de Libras para Contexto Católico",pages:266,sections:[
-{key:"corpo",title:"Parte do corpo",printedPage:20,sourcePage:22,type:"visual"},
-{key:"alfabeto",title:"Alfabeto",printedPage:28,sourcePage:30,type:"visual"},
+{key:"corpo",title:"Parte do corpo",printedPage:20,sourcePage:21,type:"visual",pages:[20,21,22,23,24,25,26,27],assetBase:"assets/apostila/unidade-1/corpo"},
+{key:"alfabeto",title:"Alfabeto",printedPage:28,sourcePage:29,type:"visual",pages:[28,29],assetBase:"assets/apostila/unidade-1/alfabeto"},
 {key:"numeros",title:"Número / Matemática",printedPage:30,sourcePage:32,type:"visual"},
 {key:"vocabulario",title:"Vocabulário inicial",printedPage:32,sourcePage:34,type:"mixed"},
 {key:"cumprimentos",title:"Cumprimentos",printedPage:35,sourcePage:37,type:"visual"},
