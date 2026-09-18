@@ -83,3 +83,10 @@ Este arquivo evita perda de sequência durante o desenvolvimento.
 - [x] Regra global: todo card de Material de apoio possui ação **VER MATERIAL**.
 - [x] Unidade II: manter Meses, Semana e Estações identificados separadamente, ainda que pertençam ao bloco de Pronomes e advérbios no sumário.
 - [x] Unidade IV: manter Iconicidade, Narrativas e Tradução/Interpretação como temas distintos, embora compartilhem a p. 73.
+
+
+## Auditoria pedagógica
+- [x] Estrutura hierárquica das Unidades I–IV auditada contra o sumário da apostila.
+- [x] Regra de não compilação registrada.
+- [x] Matriz definitiva criada em `docs/AUDITORIA-PEDAGOGICA.md`.
+- [ ] Conferir faixas exatas página a página antes de publicar intervalos de Material de apoio.
