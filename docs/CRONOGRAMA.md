@@ -79,3 +79,7 @@ Este arquivo evita perda de sequência durante o desenvolvimento.
 ## Regra terminológica
 - [x] Usar sempre **Material de apoio** na interface e documentação pedagógica.
 - [x] Não usar “Material original” para apostila, pranchas ou anexos.
+
+- [x] Regra global: todo card de Material de apoio possui ação **VER MATERIAL**.
+- [x] Unidade II: manter Meses, Semana e Estações identificados separadamente, ainda que pertençam ao bloco de Pronomes e advérbios no sumário.
+- [x] Unidade IV: manter Iconicidade, Narrativas e Tradução/Interpretação como temas distintos, embora compartilhem a p. 73.
