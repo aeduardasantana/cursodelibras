@@ -31,3 +31,20 @@ function openVisualSection(key){
  modal.onkeydown=e=>{if(e.key==="ArrowLeft"&&index>0){index--;draw()}if(e.key==="ArrowRight"&&index<pages.length-1){index++;draw()}if(e.key==="Escape")modal.classList.remove("open")};
  modal.tabIndex=-1;modal.focus();draw();
 }
+// Inicialização resiliente: monta o mapa sempre que a navegação dinâmica inserir #visualMap.
+(function initVisualMaterials(){
+ let scheduled=false;
+ function mount(){
+  scheduled=false;
+  const host=document.querySelector("#visualMap");
+  if(host && window.COURSE_MATERIALS && !host.dataset.mounted){
+   host.dataset.mounted="1";
+   renderVisualMap();
+  }
+ }
+ function schedule(){if(!scheduled){scheduled=true;requestAnimationFrame(mount)}}
+ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",schedule);else schedule();
+ const observer=new MutationObserver(schedule);
+ observer.observe(document.documentElement,{childList:true,subtree:true});
+ window.addEventListener("hashchange",schedule);
+})();
