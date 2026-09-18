@@ -2,7 +2,7 @@ function renderVisualMap(){
  const host=document.querySelector("#visualMap"); if(!host||!window.COURSE_MATERIALS)return;
  host.innerHTML=window.COURSE_MATERIALS.main.sections.map(s=>{
   const pages=s.pages||[s.printedPage], range=pages.length>1?"P. "+pages[0]+"–"+pages[pages.length-1]:"P. "+pages[0];
-  return '<article class="visual-item"><div><span class="page-ref">APOSTILA · '+range+'</span><h3>'+s.title+'</h3><p>'+(s.pages?"Sequência visual identificada e preparada para exibição integral.":"Conteúdo visual mapeado para incorporação.")+'</p></div><button class="source-badge visual-open" data-key="'+s.key+'">VER SEÇÃO</button></article>'
+  return '<article class="visual-item"><div><span class="page-ref">APOSTILA · '+range+'</span><h3>'+s.title+'</h3><p>'+(s.pages?"Sequência visual identificada e preparada para exibição integral.":"Conteúdo visual mapeado para incorporação.")+'</p></div><button class="source-badge visual-open" data-key="'+s.key+'">VER MATERIAL</button></article>'
  }).join("");
  host.querySelectorAll(".visual-open").forEach(b=>b.addEventListener("click",()=>openVisualSection(b.dataset.key)));
 }
@@ -48,3 +48,14 @@ function openVisualSection(key){
  observer.observe(document.documentElement,{childList:true,subtree:true});
  window.addEventListener("hashchange",schedule);
 })();
+function openSupportMaterial(title,pages,assetBase){
+ pages=Array.isArray(pages)?pages:[pages]; let index=0;
+ let modal=document.querySelector("#visualViewer");
+ if(!modal){modal=document.createElement("div");modal.id="visualViewer";modal.className="visual-viewer";document.body.appendChild(modal)}
+ modal.innerHTML='<div class="viewer-panel single"><button class="viewer-close" aria-label="Fechar">×</button><div class="viewer-heading"><div><p class="eyebrow">MATERIAL DE APOIO</p><h2>'+title+'</h2></div><span id="viewerCounter"></span></div><div class="single-stage"><button class="slide-arrow prev" aria-label="Página anterior">‹</button><figure id="viewerPage"></figure><button class="slide-arrow next" aria-label="Próxima página">›</button></div><div class="viewer-dots" id="viewerDots"></div></div>';
+ modal.classList.add("open"); const fig=modal.querySelector("#viewerPage"),counter=modal.querySelector("#viewerCounter"),dots=modal.querySelector("#viewerDots");
+ function draw(){const p=pages[index],asset=assetBase?assetBase+"/pagina-"+p+".webp":null;fig.innerHTML=asset?'<img src="'+asset+'" alt="'+title+' — página '+p+'" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="page-placeholder" hidden><strong>Página '+p+'</strong><span>Material de apoio em preparação</span></div><figcaption>Apostila · página '+p+'</figcaption>':'<div class="page-placeholder"><strong>Página '+p+'</strong><span>Material de apoio em preparação</span></div><figcaption>Apostila · página '+p+'</figcaption>';counter.textContent="Página "+(index+1)+" de "+pages.length+" · p. "+p;modal.querySelector(".prev").disabled=index===0;modal.querySelector(".next").disabled=index===pages.length-1;dots.innerHTML=pages.map((_,i)=>'<button class="'+(i===index?"active":"")+'" data-i="'+i+'></button>').join("");dots.querySelectorAll("button").forEach(b=>b.onclick=()=>{index=+b.dataset.i;draw()})}
+ modal.querySelector(".viewer-close").onclick=()=>modal.classList.remove("open");modal.querySelector(".prev").onclick=()=>{if(index){index--;draw()}};modal.querySelector(".next").onclick=()=>{if(index<pages.length-1){index++;draw()}};draw();
+}
+function bindSupportButtons(){document.querySelectorAll(".support-open").forEach(b=>{if(b.dataset.bound)return;b.dataset.bound="1";b.onclick=()=>openSupportMaterial(b.dataset.title,(b.dataset.pages||"").split(",").filter(Boolean).map(Number),b.dataset.asset||"")})}
+new MutationObserver(()=>bindSupportButtons()).observe(document.documentElement,{childList:true,subtree:true});document.addEventListener("DOMContentLoaded",bindSupportButtons);
