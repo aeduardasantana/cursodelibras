@@ -12,6 +12,24 @@ main:{title:"Apostila — Curso de Libras para Contexto Católico",pages:266,sec
 {key:"funcoes",title:"Funções",printedPage:44,sourcePage:46,type:"visual"},
 {key:"pecados",title:"Pecados",printedPage:45,sourcePage:47,type:"visual"}
 ]},
+unit2:{title:"Unidade II — Estrutura Linguística Básica e Vocabulário Religioso",sections:[
+{key:"pronomes",title:"Pronomes e advérbios",printedPage:55,type:"visual",status:"mapear-faixa"},
+{key:"meses",title:"Meses",printedPage:65,type:"visual",status:"mapear-faixa"},
+{key:"semana",title:"Semana",printedPage:66,type:"visual",status:"mapear-faixa"},
+{key:"estacoes",title:"Estações",printedPage:67,type:"visual",status:"mapear-faixa"},
+{key:"religioso",title:"Vocabulário religioso — Antigo Testamento, Novo Testamento e Lugares Bíblicos",printedPage:69,type:"visual",status:"mapear-faixa"}
+]},
+unit3:{title:"Unidade III — Gramática Visual e Ampliação de Vocabulário",sections:[
+{key:"verbos",title:"Verbos principais e flexões",printedPage:70,type:"mixed",status:"mapear"},
+{key:"concordancia",title:"Concordância verbal e nominal",printedPage:71,type:"mixed",status:"mapear"},
+{key:"classificadores",title:"Introdução a classificadores",printedPage:72,type:"mixed",status:"mapear"}
+]},
+unit4:{title:"Unidade IV — Discurso, Interpretação e Prática Litúrgica",sections:[
+{key:"iconicidade",title:"Iconicidade e arbitrariedade",printedPage:73,type:"mixed",status:"mapear"},
+{key:"narrativas",title:"Narrativas em Libras",printedPage:73,type:"mixed",status:"mapear"},
+{key:"traducao",title:"Tradução Libras ↔ Português e interpretação",printedPage:73,type:"mixed",status:"mapear"},
+{key:"projetos",title:"Projetos práticos",printedPage:74,type:"mixed",status:"mapear"}
+]},
 annexes:[
 {key:"verbos",title:"Vocabulário de Verbos",independent:true,indexed:false},
 {key:"minidicionario",title:"Minidicionário de Libras",independent:true,indexed:false},
