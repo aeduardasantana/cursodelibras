@@ -90,3 +90,10 @@ Este arquivo evita perda de sequência durante o desenvolvimento.
 - [x] Regra de não compilação registrada.
 - [x] Matriz definitiva criada em `docs/AUDITORIA-PEDAGOGICA.md`.
 - [ ] Conferir faixas exatas página a página antes de publicar intervalos de Material de apoio.
+
+- [x] Conferência de faixas por transição concluída para blocos sem sobreposição.
+- [x] Unidade II: Pronomes/Advérbios 55–64; Meses 65; Semana 66; Estações 67–68.
+- [x] Unidade III: páginas 70, 71 e 72 individualizadas.
+- [x] Unidade IV: temas da p. 73 preservados separadamente; Tradução continua na p. 74 e Projetos Práticos inicia na p. 74.
+- [ ] Estado Civil/Família: revisar divisão interna da p. 36 antes de declarar faixa exclusiva.
+- [ ] Vocabulário religioso: tratar a p. 69 conforme sua função de entrada/índice do material de apoio, sem fundir o anexo.
