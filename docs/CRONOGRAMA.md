@@ -72,3 +72,8 @@ Este arquivo evita perda de sequência durante o desenvolvimento.
 - [ ] Teste de progresso
 - [ ] Teste de busca
 - [ ] Teste de envio de prática
+
+
+## Regra terminológica
+- [x] Usar sempre **Material de apoio** na interface e documentação pedagógica.
+- [x] Não usar “Material original” para apostila, pranchas ou anexos.
