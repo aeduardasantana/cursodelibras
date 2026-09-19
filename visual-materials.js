@@ -47,22 +47,31 @@ function openSupportMaterial(title,pages,assetBase,pdfFile,pdfPages){if(pdfFile)
 function bindSupportButtons(){document.querySelectorAll(".support-open").forEach(b=>{if(b.dataset.bound)return;b.dataset.bound="1";b.onclick=()=>openSupportMaterial(b.dataset.title,(b.dataset.pages||"").split(",").filter(Boolean).map(Number),b.dataset.asset||"",b.dataset.pdf||"", (b.dataset.pdfPages||"").split(",").filter(Boolean).map(Number))})}
 new MutationObserver(bindSupportButtons).observe(document.documentElement,{childList:true,subtree:true});document.addEventListener("DOMContentLoaded",bindSupportButtons);
 
+let inlinePdfLibPromise=null;
+async function ensureInlinePdfLib(){
+ if(window.pdfjsLib)return window.pdfjsLib;
+ if(inlinePdfLibPromise)return inlinePdfLibPromise;
+ inlinePdfLibPromise=new Promise((resolve,reject)=>{
+   const existing=document.querySelector('script[data-inline-pdfjs="1"]');
+   if(existing){existing.addEventListener("load",()=>resolve(window.pdfjsLib),{once:true});existing.addEventListener("error",reject,{once:true});return;}
+   const s=document.createElement("script");
+   s.dataset.inlinePdfjs="1";
+   s.src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
+   s.onload=()=>{window.pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";resolve(window.pdfjsLib)};
+   s.onerror=reject;
+   document.head.appendChild(s);
+ }).catch(()=>null);
+ return inlinePdfLibPromise;
+}
 async function renderInlinePdfFigures(){
- const figures=[...document.querySelectorAll(".inline-pdf-figure")];
+ const figures=[...document.querySelectorAll(".inline-pdf-figure:not([data-rendered])")];
  if(!figures.length)return;
- if(!window.pdfjsLib){
-   await new Promise((resolve,reject)=>{
-     const s=document.createElement("script");
-     s.src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
-     s.onload=()=>{window.pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";resolve()};
-     s.onerror=reject;document.head.appendChild(s);
-   }).catch(()=>{});
- }
- if(!window.pdfjsLib)return;
+ const lib=await ensureInlinePdfLib();
+ if(!lib)return;
  for(const fig of figures){
-   if(fig.dataset.rendered)return; fig.dataset.rendered="1";
+   fig.dataset.rendered="1";
    try{
-     const pdf=await pdfjsLib.getDocument(encodeURI(fig.dataset.pdf)).promise;
+     const pdf=await lib.getDocument(encodeURI(fig.dataset.pdf)).promise;
      const page=await pdf.getPage(Number(fig.dataset.page||1));
      const viewport=page.getViewport({scale:2});
      const full=document.createElement("canvas"); full.width=viewport.width; full.height=viewport.height;
@@ -72,14 +81,14 @@ async function renderInlinePdfFigures(){
        const [x,y,w,h]=fig.dataset.crop.split(",").map(Number);
        sx=full.width*x; sy=full.height*y; sw=full.width*w; sh=full.height*h;
      }
-     const canvas=document.createElement("canvas"); canvas.width=sw; canvas.height=sh;
-     canvas.getContext("2d").drawImage(full,sx,sy,sw,sh,0,0,sw,sh);
+     const canvas=document.createElement("canvas"); canvas.width=Math.round(sw); canvas.height=Math.round(sh);
+     canvas.getContext("2d").drawImage(full,sx,sy,sw,sh,0,0,canvas.width,canvas.height);
      const old=fig.querySelector(".inline-visual-loading"); if(old)old.remove();
      fig.insertBefore(canvas,fig.querySelector("figcaption"));
    }catch(e){
+     fig.removeAttribute("data-rendered");
      const old=fig.querySelector(".inline-visual-loading"); if(old)old.textContent="Não foi possível carregar esta imagem.";
    }
  }
 }
 document.addEventListener("DOMContentLoaded",renderInlinePdfFigures);
-new MutationObserver(renderInlinePdfFigures).observe(document.documentElement,{childList:true,subtree:true});
