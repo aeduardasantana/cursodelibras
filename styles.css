@@ -12,3 +12,5 @@
 
 /* PDF real no visualizador de Material de apoio */
 .single-stage figure .pdf-page{display:block;width:100%;height:min(72vh,920px);min-height:620px;border:1px solid #ddd7cf;border-radius:8px;background:#fff}.single-stage figure object.pdf-page{overflow:hidden}.single-stage figure iframe.pdf-page{border:0}.single-stage figure figcaption{text-align:center;font-size:12px;color:#777;margin-top:6px}@media(max-width:650px){.single-stage figure .pdf-page{height:68vh;min-height:460px}}
+
+.lesson-visual{margin:28px auto;max-width:760px}.lesson-visual canvas{display:block;width:100%;height:auto;border:1px solid #ddd7cf;border-radius:12px;background:#fff}.lesson-visual figcaption{text-align:center;font-size:13px;color:#6f716d;margin-top:8px}.inline-visual-loading{padding:28px;text-align:center;border:1px solid #ddd7cf;border-radius:12px;background:#fff;color:#777}
