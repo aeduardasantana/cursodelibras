@@ -20,9 +20,9 @@ unit2:{title:"Unidade II — Estrutura Linguística Básica e Vocabulário Relig
 {key:"religioso",title:"Vocabulário religioso — Antigo Testamento, Novo Testamento e Lugares Bíblicos",printedPage:69,type:"visual",pages:[69],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[70],status:"auditar-faixa"}
 ]},
 unit3:{title:"Unidade III — Gramática Visual e Ampliação de Vocabulário",sections:[
-{key:"verbos",title:"Verbos principais e flexões",printedPage:70,type:"mixed",pages:[70],status:"faixa-confirmada"},
-{key:"concordancia",title:"Concordância verbal e nominal",printedPage:71,type:"mixed",pages:[71],status:"faixa-confirmada"},
-{key:"classificadores",title:"Introdução a classificadores",printedPage:72,type:"mixed",pages:[72],status:"faixa-confirmada"}
+{key:"verbos",title:"Verbos principais e flexões",printedPage:70,type:"mixed",pages:[70],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[71],status:"faixa-confirmada"},
+{key:"concordancia",title:"Concordância verbal e nominal",printedPage:71,type:"mixed",pages:[71],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[72],status:"faixa-confirmada"},
+{key:"classificadores",title:"Introdução a classificadores",printedPage:72,type:"mixed",pages:[72],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[73],status:"faixa-confirmada"}
 ]},
 unit4:{title:"Unidade IV — Discurso, Interpretação e Prática Litúrgica",sections:[
 {key:"iconicidade",title:"Iconicidade e arbitrariedade",printedPage:73,type:"mixed",pages:[73],status:"compartilha-pagina"},
