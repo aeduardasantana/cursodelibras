@@ -13,11 +13,11 @@ main:{title:"Apostila — Curso de Libras para Contexto Católico",pages:266,sec
 {key:"pecados",title:"Pecados",printedPage:45,sourcePage:47,type:"visual",pages:[45,46,47],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[47,48,49],rangeStatus:"confirmed-by-transition"}
 ]},
 unit2:{title:"Unidade II — Estrutura Linguística Básica e Vocabulário Religioso",sections:[
-{key:"pronomes",title:"Pronomes e advérbios",printedPage:55,type:"mixed",pages:[55,56,57,58,59,60,61,62,63,64],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[57,58,59,60,61,62,63,64,65,66],status:"faixa-confirmada"},
-{key:"meses",title:"Meses",printedPage:65,type:"visual",pages:[65],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[67],status:"faixa-confirmada"},
-{key:"semana",title:"Semana",printedPage:66,type:"visual",pages:[66],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[68],status:"faixa-confirmada"},
-{key:"estacoes",title:"Estações",printedPage:67,type:"visual",pages:[67,68],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[69,70],status:"faixa-confirmada-por-transicao"},
-{key:"religioso",title:"Vocabulário religioso — Antigo Testamento, Novo Testamento e Lugares Bíblicos",printedPage:69,type:"visual",pages:[69],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[71],status:"auditar-faixa"}
+{key:"pronomes",title:"Pronomes e advérbios",printedPage:55,type:"mixed",pages:[55,56,57,58,59,60,61,62,63,64],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[56,57,58,59,60,61,62,63,64,65],status:"faixa-confirmada"},
+{key:"meses",title:"Meses",printedPage:65,type:"visual",pages:[65],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[66],status:"faixa-confirmada"},
+{key:"semana",title:"Semana",printedPage:66,type:"visual",pages:[66],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[67],status:"faixa-confirmada"},
+{key:"estacoes",title:"Estações",printedPage:67,type:"visual",pages:[67,68],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[68,69],status:"faixa-confirmada-por-transicao"},
+{key:"religioso",title:"Vocabulário religioso — Antigo Testamento, Novo Testamento e Lugares Bíblicos",printedPage:69,type:"visual",pages:[69],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[70],status:"auditar-faixa"}
 ]},
 unit3:{title:"Unidade III — Gramática Visual e Ampliação de Vocabulário",sections:[
 {key:"verbos",title:"Verbos principais e flexões",printedPage:70,type:"mixed",pages:[70],status:"faixa-confirmada"},
