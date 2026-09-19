@@ -17,18 +17,18 @@ unit2:{title:"Unidade II — Estrutura Linguística Básica e Vocabulário Relig
 {key:"meses",title:"Meses",printedPage:65,type:"visual",pages:[65],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[66],status:"faixa-confirmada"},
 {key:"semana",title:"Semana",printedPage:66,type:"visual",pages:[66],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[67],status:"faixa-confirmada"},
 {key:"estacoes",title:"Estações",printedPage:67,type:"visual",pages:[67,68],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[68,69],status:"faixa-confirmada-por-transicao"},
-{key:"religioso",title:"Vocabulário religioso — Antigo Testamento, Novo Testamento e Lugares Bíblicos",printedPage:69,type:"visual",pages:[69],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE A.pdf",pdfPages:[70],status:"auditar-faixa"}
+{key:"religioso",title:"Vocabulário religioso — Antigo Testamento, Novo Testamento e Lugares Bíblicos",printedPage:69,type:"visual",pages:[3,4,5,6,7,8,9,10,11,12,13,14,15,22,23,24],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE B.pdf",pdfPages:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],status:"material-complementar-confirmado"}
 ]},
 unit3:{title:"Unidade III — Gramática Visual e Ampliação de Vocabulário",sections:[
-{key:"verbos",title:"Verbos principais e flexões",printedPage:70,type:"mixed",pages:[70],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE C.pdf",pdfPages:[1],status:"faixa-confirmada"},
-{key:"concordancia",title:"Concordância verbal e nominal",printedPage:71,type:"mixed",pages:[71],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE C.pdf",pdfPages:[2],status:"faixa-confirmada"},
-{key:"classificadores",title:"Introdução a classificadores",printedPage:72,type:"mixed",pages:[72],pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE E.pdf",pdfPages:[1],status:"faixa-confirmada"}
+{key:"verbos",title:"Verbos principais e flexões",printedPage:70,type:"text",pages:[70],status:"conteudo-principal-html"},
+{key:"concordancia",title:"Concordância verbal e nominal",printedPage:71,type:"text",pages:[71],status:"conteudo-principal-html"},
+{key:"classificadores",title:"Introdução a classificadores",printedPage:72,type:"text",pages:[72],status:"conteudo-principal-html",support:{title:"Classificadores — material complementar",pdfFile:"APOSTILA FRAGMENTADA/IMPRESSÃO APOSTILA  - PARTE F.pdf",pdfPages:[1,2,3,4,5,6,7,8],pages:[3,4,5,6,7,8,9,10]}}
 ]},
 unit4:{title:"Unidade IV — Discurso, Interpretação e Prática Litúrgica",sections:[
-{key:"iconicidade",title:"Iconicidade e arbitrariedade",printedPage:73,type:"mixed",pages:[73],status:"compartilha-pagina"},
-{key:"narrativas",title:"Narrativas em Libras",printedPage:73,type:"mixed",pages:[73],status:"compartilha-pagina"},
-{key:"traducao",title:"Tradução Libras ↔ Português e interpretação",printedPage:73,type:"mixed",pages:[73,74],status:"continua-na-pagina-seguinte"},
-{key:"projetos",title:"Projetos práticos",printedPage:74,type:"mixed",pages:[74],status:"faixa-confirmada"}
+{key:"iconicidade",title:"Iconicidade e arbitrariedade",printedPage:73,type:"text",pages:[73],status:"conteudo-principal-html"},
+{key:"narrativas",title:"Narrativas em Libras",printedPage:73,type:"text",pages:[73],status:"conteudo-principal-html"},
+{key:"traducao",title:"Tradução Libras ↔ Português e interpretação",printedPage:73,type:"text",pages:[73,74],status:"conteudo-principal-html"},
+{key:"projetos",title:"Projetos práticos",printedPage:74,type:"text",pages:[74],status:"conteudo-principal-html"}
 ]},
 annexes:[
 {key:"verbos",title:"Vocabulário de Verbos",independent:true,indexed:false},
