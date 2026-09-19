@@ -60,3 +60,12 @@
 - [ ] Inserir Material de apoio real nos visualizadores.
 - [ ] Converter atividades existentes sem alterar o objetivo pedagógico.
 - [ ] Só depois revisar integralidade e avançar aos anexos.
+
+
+## Regra revisada — uso de Material de apoio
+
+- Conteúdo textual da própria apostila principal deve ser transposto para HTML e **não** receber card de Material de apoio apenas por existir em uma página PDF.
+- Material de apoio deve aparecer quando houver recurso visual, prancha, vocabulário, anexo ou fonte complementar cuja consulta acrescente algo que o HTML não reproduz adequadamente.
+- Unidade III: Verbos, Concordância e Introdução a classificadores são conteúdo principal em HTML. O anexo FATEC de classificadores é Material de apoio complementar e deve ser acessível junto ao bloco que apresenta os tipos de classificadores.
+- Unidade IV: Iconicidade, Narrativas, Tradução/Interpretação e Projetos práticos são conteúdo textual principal. Não devem exibir cards redundantes de Material de apoio sem recurso complementar específico.
+- Unidade II: Vocabulário religioso usa o fragmento bíblico específico como Material de apoio, mantendo-o separado da apostila principal.
