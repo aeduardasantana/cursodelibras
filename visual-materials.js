@@ -46,3 +46,40 @@ function openPdfSupport(title,pdfFile,pdfPages,printedPages){
 function openSupportMaterial(title,pages,assetBase,pdfFile,pdfPages){if(pdfFile)return openPdfSupport(title,pdfFile,pdfPages||[1],pages);pages=Array.isArray(pages)?pages:[pages];let index=0;let modal=document.querySelector("#visualViewer");if(!modal){modal=document.createElement("div");modal.id="visualViewer";modal.className="visual-viewer";document.body.appendChild(modal)}modal.innerHTML='<div class="viewer-panel single"><button class="viewer-close" aria-label="Fechar">×</button><div class="viewer-heading"><div><p class="eyebrow">MATERIAL DE APOIO</p><h2>'+title+'</h2></div><span id="viewerCounter"></span></div><div class="single-stage"><button class="slide-arrow prev">‹</button><figure id="viewerPage"></figure><button class="slide-arrow next">›</button></div><div class="viewer-dots" id="viewerDots"></div></div>';modal.classList.add("open");const fig=modal.querySelector("#viewerPage"),counter=modal.querySelector("#viewerCounter"),dots=modal.querySelector("#viewerDots");function draw(){const p=pages[index],asset=assetBase?assetBase+"/pagina-"+p+".webp":null;fig.innerHTML=asset?'<img src="'+asset+'" alt="'+title+' — página '+p+'"><figcaption>Apostila · página '+p+'</figcaption>':'<div class="page-placeholder"><strong>Página '+p+'</strong><span>Material de apoio em preparação</span></div>';counter.textContent="Página "+(index+1)+" de "+pages.length+" · p. "+p;modal.querySelector(".prev").disabled=index===0;modal.querySelector(".next").disabled=index===pages.length-1;dots.innerHTML=pages.map((_,i)=>'<button class="'+(i===index?"active":"")+'" data-i="'+i+'"></button>').join("");dots.querySelectorAll("button").forEach(b=>b.onclick=()=>{index=+b.dataset.i;draw()})}modal.querySelector(".viewer-close").onclick=()=>modal.classList.remove("open");modal.querySelector(".prev").onclick=()=>{if(index){index--;draw()}};modal.querySelector(".next").onclick=()=>{if(index<pages.length-1){index++;draw()}};draw()}
 function bindSupportButtons(){document.querySelectorAll(".support-open").forEach(b=>{if(b.dataset.bound)return;b.dataset.bound="1";b.onclick=()=>openSupportMaterial(b.dataset.title,(b.dataset.pages||"").split(",").filter(Boolean).map(Number),b.dataset.asset||"",b.dataset.pdf||"", (b.dataset.pdfPages||"").split(",").filter(Boolean).map(Number))})}
 new MutationObserver(bindSupportButtons).observe(document.documentElement,{childList:true,subtree:true});document.addEventListener("DOMContentLoaded",bindSupportButtons);
+
+async function renderInlinePdfFigures(){
+ const figures=[...document.querySelectorAll(".inline-pdf-figure")];
+ if(!figures.length)return;
+ if(!window.pdfjsLib){
+   await new Promise((resolve,reject)=>{
+     const s=document.createElement("script");
+     s.src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
+     s.onload=()=>{window.pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";resolve()};
+     s.onerror=reject;document.head.appendChild(s);
+   }).catch(()=>{});
+ }
+ if(!window.pdfjsLib)return;
+ for(const fig of figures){
+   if(fig.dataset.rendered)return; fig.dataset.rendered="1";
+   try{
+     const pdf=await pdfjsLib.getDocument(encodeURI(fig.dataset.pdf)).promise;
+     const page=await pdf.getPage(Number(fig.dataset.page||1));
+     const viewport=page.getViewport({scale:2});
+     const full=document.createElement("canvas"); full.width=viewport.width; full.height=viewport.height;
+     await page.render({canvasContext:full.getContext("2d"),viewport}).promise;
+     let sx=0,sy=0,sw=full.width,sh=full.height;
+     if(fig.dataset.crop){
+       const [x,y,w,h]=fig.dataset.crop.split(",").map(Number);
+       sx=full.width*x; sy=full.height*y; sw=full.width*w; sh=full.height*h;
+     }
+     const canvas=document.createElement("canvas"); canvas.width=sw; canvas.height=sh;
+     canvas.getContext("2d").drawImage(full,sx,sy,sw,sh,0,0,sw,sh);
+     const old=fig.querySelector(".inline-visual-loading"); if(old)old.remove();
+     fig.insertBefore(canvas,fig.querySelector("figcaption"));
+   }catch(e){
+     const old=fig.querySelector(".inline-visual-loading"); if(old)old.textContent="Não foi possível carregar esta imagem.";
+   }
+ }
+}
+document.addEventListener("DOMContentLoaded",renderInlinePdfFigures);
+new MutationObserver(renderInlinePdfFigures).observe(document.documentElement,{childList:true,subtree:true});
