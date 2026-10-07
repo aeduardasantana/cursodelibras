@@ -1,0 +1,37 @@
+name: Deploy para Locaweb
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-locaweb-cursodelibras
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Publicar /public_html/cursodelibras
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Publicar via FTP na Locaweb
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASS }}
+          protocol: ftp
+          port: 21
+          local-dir: ./
+          server-dir: /public_html/cursodelibras/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            README.md
+            CNAME
